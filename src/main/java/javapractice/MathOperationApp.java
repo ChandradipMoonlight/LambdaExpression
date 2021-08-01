@@ -15,7 +15,7 @@ interface IMathFunction{
 }
 public class MathOperationApp {
     public static void main(String[] args) {
-//        IMathFunction add = (x, y) ->  x+y;
+//      IMathFunction add = (x, y) ->  x+y;
         IMathFunction add = Integer::sum; // this will implement same as in above line code
         IMathFunction subtraction = (x, y) -> x-y;
         IMathFunction multiply = (x, y) -> x*y;
@@ -26,7 +26,7 @@ public class MathOperationApp {
         System.out.println("Multiplication: "+multiply.calculate(5,6));
         System.out.println("Division: "+divide.calculate(30, 6));
 
-        // showing the result by passing the lambda expression as parameter in the printResult method
+//      showing the result by passing the lambda expression as parameter in the printResult method
         IMathFunction.printResult(5,6, "Addition", add);
         IMathFunction.printResult(5, 6, "Subtraction", subtraction);
         IMathFunction.printResult(5,6, "Multiplication", multiply);
